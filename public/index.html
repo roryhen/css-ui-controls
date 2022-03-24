@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS UI Controls</title>
+    <meta name="description" content="CSS UI Controls" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="data:" />
+    <link rel="modulepreload" as="script" href="/index.js" />
+  </head>
+  <body>
+    <header>
+      <h1>UI Elements</h1>
+      <nav>
+        <ul>
+          <li><a href="#fonts">Fonts</a></li>
+          <li><a href="#formats">Formats</a></li>
+          <li><a href="#figures">Figures</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="grid">
+      <article class="card" id="fonts">
+        <h2>Typography</h2>
+        <div class="content">
+          <h1>Heading One</h1>
+
+          <h2>Heading Two</h2>
+          <p>
+            No one would have believed in the last years of the nineteenth
+            century that this world was being watched keenly and closely by
+            intelligences greater than man’s and yet as mortal as his own; that
+            as men busied themselves about their various concerns they were
+            scrutinised and studied, perhaps almost as narrowly as a man with a
+            microscope might scrutinise the transient creatures that swarm and
+            multiply in a drop of water.
+          </p>
+
+          <h3>Heading Three</h3>
+          <p>
+            With infinite complacency men went to and fro over this globe about
+            their little affairs, serene in their assurance of their empire over
+            matter. It is possible that the infusoria under the microscope do
+            the same.
+          </p>
+        </div>
+      </article>
+      <article class="card" id="formats">
+        <h2>Special Formats</h2>
+        <div class="content">
+          <h3>Links</h3>
+          <p>
+            <a href="#0">Internal Link</a>,
+            <a href="https://">External Link</a> ,<a href="http://"
+              >External Link (insecure)</a
+            >
+          </p>
+
+          <h3>Blockquote</h3>
+          <blockquote>
+            No one gave a thought to the older worlds of space as sources of
+            human danger, or thought of them only to dismiss the idea of life
+            upon them as impossible or improbable. It is curious to recall some
+            of the mental habits of those departed days.
+            <cite>H.G. Wells, The War of the Worlds</cite>
+          </blockquote>
+
+          <h3>Code Block</h3>
+          <pre data-lang="Javascript">
+  const array = [1, 2, 3, 4, 5];
+  function myCode(items) {
+    for (let item of items) {
+        return item.value;
+    }
+  }
+  myCode(array);
+          </pre>
+
+          <h3>Notice</h3>
+          <p class="notice">
+            Please fill out your <a href="#0">account details</a> to complete
+            your profile.
+          </p>
+        </div>
+      </article>
+      <article class="card" id="figures">
+        <h2>Figures</h2>
+        <div class="content">
+          <figure>
+            <img
+              src="https://placebear.com/480/360"
+              alt="placeholder image"
+              width="480"
+              height="360"
+            />
+            <figcaption>Image Caption</figcaption>
+          </figure>
+
+          <div class="table">
+            <table>
+              <tr>
+                <th></th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+              </tr>
+              <tr>
+                <th>English</th>
+                <td>One</td>
+                <td>Two</td>
+                <td>Three</td>
+                <td>Four</td>
+              </tr>
+              <tr>
+                <th>Español</th>
+                <td>Uno</td>
+                <td>Dos</td>
+                <td>Tres</td>
+                <td>Cuatro</td>
+              </tr>
+              <tr>
+                <th>Français</th>
+                <td>Un</td>
+                <td>Deux</td>
+                <td>Trois</td>
+                <td>Quatre</td>
+              </tr>
+              <tr>
+                <th>Deutsche</th>
+                <td>Ein</td>
+                <td>Zwei</td>
+                <td>Drei</td>
+                <td>Vier</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </article>
+      <article class="card" id="forms">
+        <h2>Form Controls</h2>
+        <div class="content">
+          <fieldset>
+            <legend>Buttons</legend>
+            <div class="form-row">
+              <button type="button">Button</button>
+              <button type="button">With Icon</button>
+              <button type="button">Icon</button>
+            </div>
+            <div class="form-row">
+              <button type="button">Alt Button</button>
+              <button type="button">Cancel</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Field Inputs</legend>
+            <div class="form-row">
+              <label for="search">Search</label>
+              <input type="search" id="search" />
+              <button type="button">Search</button>
+            </div>
+            <div class="form-row">
+              <label for="text">Text</label>
+              <input type="text" name="text" id="text" />
+            </div>
+            <div class="form-row">
+              <label for="textarea">Text Area</label>
+              <textarea name="textarea" id="textarea"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Selects</legend>
+            <div class="form-row">
+              <label for="select">Select</label>
+              <select name="select" id="select">
+                <option value="" disabled selected>
+                  Select One
+                </option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="select">Multi-Select</label>
+              <select name="multiselect" id="multiselect" size="3" multiple>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Radio Inputs</legend>
+            <div class="form-row radio">
+              <input type="radio" name="radio" id="radio1" checked />
+              <label for="radio1">Radio 1</label>
+              <input type="radio" name="radio" id="radio2" />
+              <label for="radio2">Radio 2</label>
+              <input type="radio" name="radio" id="radio3" />
+              <label for="radio3">Radio 3</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Checkbox Inputs</legend>
+            <div class="form-row checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox1" />
+              <label for="checkbox1">Checkbox 1</label>
+              <input type="checkbox" name="checkbox" id="checkbox2" />
+              <label for="checkbox2">Checkbox 2</label>
+              <input type="checkbox" name="checkbox" id="checkbox3" />
+              <label for="checkbox3">Checkbox 3</label>
+            </div>
+          </fieldset>
+        </div>
+      </article>
+    </main>
+    <aside></aside>
+    <footer id="footer"></footer>
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>

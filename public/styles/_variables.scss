@@ -1,0 +1,34 @@
+:root {
+  // Linked up with Controls
+  --size-text-size: 0;
+  --scale-font-scale: 1;
+  --text-colors-main: #000;
+  --text-colors-accent: #ccc;
+  --colors-main: #000;
+  --colors-accent: #ccc;
+  --colors-bg-color: #eee;
+  --borders-radius: 0;
+  --spacing-inner: 0;
+  --spacing-outer: 0;
+
+  /* Typography */
+  --line-height: max(0.8, calc(var(--spacing-inner) * 1));
+  --p-spacing: max(0.5em, calc(var(--spacing-inner) * 1em));
+  --h-line-height: max(0.6, calc(var(--spacing-inner) * 0.5));
+  --h-spacing: max(0.3em, calc(var(--spacing-inner) * 0.5em));
+  --font-size: max(0.7em, calc(1em * var(--size-text-size)));
+
+  /* Thanks Zoraida - https://medium.com/hackernoon/modular-and-dynamic-type-scales-with-plain-css-41f86197bdf0 */
+  --p-size: var(--font-size);
+  --h6-size: calc(var(--font-size) * var(--scale-font-scale));
+  --h5-size: calc(var(--h6-size) * var(--scale-font-scale));
+  --h4-size: calc(var(--h5-size) * var(--scale-font-scale));
+  --h3-size: calc(var(--h4-size) * var(--scale-font-scale));
+  --h2-size: calc(var(--h3-size) * var(--scale-font-scale));
+  --h1-size: calc(var(--h2-size) * var(--scale-font-scale));
+
+  /* Boxes */
+  --box-margin: calc(var(--spacing-outer) * 1rem);
+  --box-border: calc(var(--borders-radius) * 0.1em);
+  --box-padding: calc(var(--spacing-inner) * 0.5rem);
+}

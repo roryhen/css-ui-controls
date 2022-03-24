@@ -1,0 +1,140 @@
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s;
+  transform: translate(calc(100% - 3rem), 0);
+  display: flex;
+  & .toggle {
+    flex: 1 0 auto;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border: 0;
+    background: #efefef;
+    svg {
+      transition: transform 0.3s;
+    }
+  }
+  &.shown {
+    transform: translate(0, 0);
+
+    .toggle svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.panel {
+  --panel-bg-color: #efefef;
+  overflow-y: auto;
+  height: 100vh;
+  background: var(--panel-bg-color);
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--panel-bg-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(0 0 0 / 0.2);
+  }
+}
+
+.controls {
+  --form-accent: orangered;
+  --input-font-size: 0.8rem;
+  padding: 2em;
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+  accent-color: var(--form-accent);
+
+  legend {
+    position: relative;
+    top: 0;
+    left: -1rem;
+    font-weight: 700;
+    background: white;
+    padding: 0.5rem 1rem;
+  }
+
+  fieldset {
+    background: white;
+    padding: 1rem;
+  }
+
+  label {
+    font-size: var(--input-font-size);
+  }
+
+  ::selection {
+    background-color: cyan;
+  }
+
+  :focus-visible {
+    outline-color: var(--form-accent);
+    outline-style: solid;
+  }
+
+  [type='color'] {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 2px solid var(--form-accent);
+
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+      border: 1px solid white;
+    }
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    place-items: center end;
+    gap: 0.5rem;
+
+    & > :first-child {
+      justify-self: start;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .reactive-input,
+  select {
+    box-sizing: border-box;
+    height: calc(var(--input-font-size) + 0.7em);
+    padding: 0.2rem;
+    font-family: monospace;
+    font-size: var(--input-font-size);
+    color: var(--form-accent);
+    text-align: end;
+    background: linear-gradient(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.9)),
+      linear-gradient(var(--form-accent), var(--form-accent));
+  }
+
+  [type='range'] {
+    width: 6rem;
+  }
+
+  .reactive-input[type='number'] {
+    width: 8ch;
+  }
+
+  .reset {
+    font-weight: 700;
+    padding-bottom: 0.1em;
+    width: calc(var(--input-font-size) + 0.7em);
+    height: calc(var(--input-font-size) + 0.7em);
+  }
+}
