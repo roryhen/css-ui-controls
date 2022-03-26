@@ -11,19 +11,18 @@ const components = {
 
 function createComponent (field, ns) {
   if (typeof field.type !== 'undefined' && field.type in components) {
-    field.heading = ns
     return createElement(components[field.type], {
-      field: field
+      field: { heading: ns, ...field }
     })
   }
   return <div>The field cannot be read, check the settings format.</div>
 }
 
-export default function Fieldset (props) {
+export default function Fieldset ({ heading, fields }) {
   return (
     <fieldset>
-      <legend>{props.heading}</legend>
-      {props.fields.map(field => createComponent(field, props.heading))}
+      <legend>{heading}</legend>
+      {fields.map(field => createComponent(field, heading))}
     </fieldset>
   )
 }

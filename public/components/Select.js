@@ -31,7 +31,7 @@ export default function Select (props) {
       />
       <input
         type='button'
-        value={'\u27F2'}
+        value={'\u21BA'}
         onClick={() => setValue(initial)}
         className='reset'
       />
